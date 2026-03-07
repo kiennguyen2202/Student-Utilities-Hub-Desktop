@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quick Note</title>
+</head>
+
+<body>
+
+<h2>Quick Note</h2>
+
+<textarea id="note" rows="10" cols="40"></textarea>
+
+<br><br>
+
+<button onclick="saveNote()">Save Note</button>
+
+<script>
+
+function saveNote() {
+    let note = document.getElementById("note").value;
+    localStorage.setItem("quickNote", note);
+    alert("Note saved!");
+}
+
+window.onload = function() {
+    let saved = localStorage.getItem("quickNote");
+    if(saved){
+        document.getElementById("note").value = saved;
+    }
+}
+
+</script>
+
+</body>
+</html>

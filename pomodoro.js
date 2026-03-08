@@ -5,3 +5,6 @@ function startPomodoro() {
 }
 
 startPomodoro();
+function pausePomodoro() {
+    console.log("Pomodoro paused");
+}

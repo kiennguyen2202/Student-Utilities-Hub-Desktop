@@ -1,20 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GPA-Calculator</title>
+<title>GPA Calculator</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    width:320px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#2575fc;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1b5ed8;
+}
+
+#result{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:#444;
+}
+</style>
+
 </head>
 
 <body>
 
-<h2>GPA Calculator</h2>
+<div class="container">
+<h2>🎓 GPA Calculator</h2>
 
 <input type="number" id="score1" placeholder="Subject 1">
 <input type="number" id="score2" placeholder="Subject 2">
 <input type="number" id="score3" placeholder="Subject 3">
 
-<button onclick="calculateGPA()">GPA Calculator</button>
+<button onclick="calculateGPA()">Calculate GPA</button>
 
 <p id="result"></p>
+</div>
 
 <script src="gpa.js"></script>
 
